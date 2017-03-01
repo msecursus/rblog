@@ -1,0 +1,234 @@
+.paginate{
+	font-weight:bold;
+	
+  a{
+    color: #51360e;
+    padding: 3px 6px;
+    background: #efcf9e;
+  }
+  a:hover{
+  	background: #fff;
+    color: #51360e;
+    padding: 3px 6px;
+    text-decoration:none;
+  }
+    color: #fff;
+     //background: brown;
+  
+}
+
+.class{
+	width: 250px;
+	//padding: 0 30px;
+	text-align: center;
+	//background: #db7120;
+	animation-name: beweeg;
+	animation-duration: 5s;
+	
+  transform: translateX(50px);  //X as
+  //transform: translateY(65px); //Y as
+  //transform: translate(50px, 55px); //Y X as
+  //transform: rotate(30deg) scale(2); 
+  //transform: rotate(360deg); 
+  //transform: scale(2);
+  
+@keyframes beweeg {
+  from{transform: translateX(-200px);}
+  to{transform: translateX(2500px);}
+  //from{transform: translateY(-200px);}
+  //to{transform: translateY(2500px);}
+}
+
+}
+.class:hover{
+	background-color: orange;
+	transition: background-color 3s, transform 2s;
+	transform: rotate(30deg) scale(2); 
+  //transform: rotate(360deg); 
+  //transform: scale(2);
+}
+.submitbtn{
+	width:10%;
+	height:33px;
+	background:lightgreen;
+	color:darkgreen;
+}
+body{
+  font-family: 'Open Sans', sans-serif, Pacifico;
+  background:$bgcolor;
+}
+h1{
+	letter-spacing:-5px;
+}
+
+h2,h3{
+  letter-spacing:2.5px;
+  line-height:1.5;
+}
+p{
+  letter-spacing:2px;
+  line-height:1.5;
+  font-size:18px;
+}
+a{
+  letter-spacing:4px;
+  font-weight:bold;
+
+}
+
+.navbar{
+	#margin-bottom:0px; 
+	overflow:auto;
+	min-height:100px;
+	background:#36424a;
+	color:#fff;
+	font-size:13px;
+	font-weight:bold;
+	border-radius:0;
+}
+.navbar h1{
+	margin:10px 0 0 0; 
+	padding:0;
+
+}
+.navbar a{
+	color:#fff !important;
+}
+/*.navbar a:.navbar-brand:hover{
+	color:#fff !important;
+}*/
+.navbar a:hover{
+	color:#ff953f !important;
+}
+.navbar ul{
+	margin-top:22px;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color:#ff953f !important;
+     background:none; 
+}
+.search-form{
+	margin-top:30px;
+}
+.search-form .form-group{
+	display: inline-block;
+	margin-bottom: 0;
+	vertical-align: middle;
+}
+.search-form input[type='text']{
+	border:1px solid #ff953f;
+	border-right:none;
+	border-radius:13px 0px 0px 13px;
+	height:40px;
+	background:#f4f4f4;
+}
+.search-form .btn{
+	border:1px solid #ff953f;
+	border-left:none;
+	border-radius:0 13px 13px 0;
+	height:40px;
+	margin-left: -5px;
+	background:#fec400;//#d68e13;
+	color:#36424a;
+	
+}
+.search-form .btn:hover{
+	color:#fff;
+	background:#d68e13;//#d1e1ed;
+
+}
+
+.btn-primary{
+	background:#d68e13;
+	color:#fff;
+	border:none;
+	
+	border-radius:0;
+}
+.btn-primary:hover{
+	background:#d1e1ed;
+	color:#36424a;
+}
+
+
+
+.post{
+	border:1px solid #ccc;
+	background:#fff;
+	margin-bottom:30px;
+}
+.post-content{
+	
+	padding:20px;
+}
+
+.post h3{
+	
+	padding:0px;
+	margin:0px;
+
+}
+.post img{
+	width:100%;
+}
+.post small{
+	background:#36424a;
+	color:#fff;
+	padding:5px 10px;
+	margin:10px 0;
+	display:block;
+
+}
+.post a{
+	font-weight:bold;
+	
+}
+footer{
+	text-align:center;
+	background:#36424a;
+	color:#fff;
+	padding-top:20px;
+	margin-top:30px;
+	height:60px;
+	
+}
+footer p{
+	font-size:14px;
+}
+footer a{
+	color:#d1e1ed;
+
+}
+footer a:hover{
+	color:#d68e13;
+	
+}
+
+
+
+.list-group a{
+	color:#d68e13;
+}
+
+/* ************************ 
+   -----> INDEX <-----
+************************* */
+
+/* ************************ 
+   -----> ABOUT <-----
+************************* */
+h1.habout{
+	font-size:100px;
+	color:#d68e13;
+	
+
+}
+
+.jumbotron {
+	text-align:center;
+	background-image:url('../img/Death_to_stock_kinckerbocker_photography_1.jpg');
+	background-size:cover;
+	height:375px;
+	
+	
+}

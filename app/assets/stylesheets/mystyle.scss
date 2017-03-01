@@ -1,0 +1,196 @@
+ *{
+ 	padding:0;
+ 	margin:0;
+ }
+ 
+ .notice{
+      color:purple;
+      font-size:18px;
+      background:#d39bef;
+      
+  }
+  .alert{
+      color:#e27373;
+      font-weight:bold;
+      font-size:18px;
+      background:#960707;
+  }
+body{
+  font-family: 'Open Sans', sans-serif, Pacifico;
+  background:$bgcolor;//#eee;
+}
+h1{
+	letter-spacing:-5px;
+}
+
+h2,h3{
+  letter-spacing:2.5px;
+  line-height:1.5;
+}
+p{
+  letter-spacing:2px;
+  line-height:1.5;
+  font-size: 1.2em;
+}
+a{
+  letter-spacing:4px;
+  font-weight:bold;
+
+}
+
+.navbar{
+	#margin-bottom:0px; 
+	overflow:auto;
+	min-height:100px;
+	background:$pric;
+	color:#fff;
+	font-size:13px;
+	font-weight:bold;
+	border-radius:0;
+}
+.navbar h1{
+	margin:10px 0 0 0; 
+	padding:0;
+
+}
+.navbar a{
+	color:#fff !important;
+}
+/*.navbar a:.navbar-brand:hover{
+	color:#fff !important;
+}*/
+.navbar a:hover{
+	color:#ff953f !important;
+}
+.navbar ul{
+	margin-top:22px;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color:#ff953f !important;
+     background:none; 
+}
+.search-form{
+	margin-top:30px;
+}
+.search-form .form-group{
+	display: inline-block;
+	margin-bottom: 0;
+	vertical-align: middle;
+}
+.search-form input[type='text']{
+	border:1px solid #ff953f;
+	border-right:none;
+	border-radius:13px 0px 0px 13px;
+	height:40px;
+	background:#f4f4f4;
+}
+.search-form .btn{
+	border:1px solid #ff953f;
+	border-left:none;
+	border-radius:0 13px 13px 0;
+	height:40px;
+	margin-left: -5px;
+	background:#fec400;//#d68e13;
+	color:$pric;
+	
+}
+.search-form .btn:hover{
+	color:#fff;
+	background:$secc;//#d1e1ed;
+
+}
+
+.btn-primary{
+	background:$secc;
+	color:#fff;
+	border:none;
+	
+	border-radius:0;
+}
+.btn-primary:hover{
+	background:#d1e1ed;
+	color:$pric;
+}
+
+
+
+.post{
+	border:1px solid #ccc;
+	background:#fff;
+	margin-bottom:30px;
+}
+.post-content{
+	
+	padding:20px;
+}
+
+.post h3{
+	
+	padding:0px;
+	margin:0px;
+
+}
+.post img{
+	width:100%;
+}
+.post small{
+	background:$pric;
+	color:#fff;
+	padding:5px 10px;
+	margin:10px 0;
+	display:block;
+
+}
+.post a{
+	font-weight:bold;
+	
+}
+footer{
+	text-align:center;
+	background:$pric;
+	color:#fff;
+	padding-top:20px;
+	margin-top:30px;
+	height:60px;
+	
+}
+footer p{
+	font-size:14px;
+}
+footer a{
+	color:#d1e1ed;
+
+}
+footer a:hover{
+	color:$secc;
+	
+}
+
+
+
+.list-group a{
+	color:$secc;
+}
+
+/* ************************ 
+   -----> INDEX <-----
+************************* */
+
+/* ************************ 
+   -----> ABOUT <-----
+************************* */
+h1.habout{
+	font-size:100px;
+	color:$secc;
+	
+
+}
+
+.jumbotron {
+	text-align:center;
+	background-image:url('../img/Death_to_stock_kinckerbocker_photography_1.jpg');
+	background-size:cover;
+	height:375px;
+	
+	
+}

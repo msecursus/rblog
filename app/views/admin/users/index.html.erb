@@ -1,0 +1,38 @@
+<h1>Admin::Users#index</h1>
+<p>Find me in app/views/admin/users/index.html.erb</p>
+<%= will_paginate @categories %>
+<div class="well">
+				
+	<h2 class="page-header">Posts<%= link_to "Create New", new_admin_user_path, class:'btn btn-success pull-right' %> </h2>
+	<% if @users %>
+		<table class="table">
+
+			<tr>
+				<th>User name</th>
+				<th>Post Category</th>
+				<th>Post Created</th>
+				<th>Actions</th>
+			</tr>
+
+			<% @users.each do |user| %>
+
+				<tr>
+					<td><%= user.name %></td>
+					<td><%= user.email %></td>
+					<td><%= user.created_at.to_time.strftime('%B %e at %l:%M %p') %></td>
+					<td><%= link_to "Edit", edit_admin_user_path(user), class:'btn btn-primary' %>
+						<%= link_to "Delete", admin_user_path(user), class:'btn btn-danger', method: :delete, data: {confirm: 'Are you SURE'} %>
+					</td>
+				</tr>
+
+			<% end %>
+		
+		</table>
+		<div class="paginate"> <%= will_paginate @categories %> </div>
+
+	
+	<% else %>
+		<p>There Are No Users </p>
+	<% end %>
+
+</div>

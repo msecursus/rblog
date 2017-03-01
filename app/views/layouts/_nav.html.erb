@@ -1,0 +1,101 @@
+<nav>
+   <ul class="navul left">
+    <li><%= link_to "home", pages_index_path %></li>
+    <li><%= link_to "fast", pages_slow_path %></li>
+    <li><%= link_to "slow", pages_fast_path %></li>
+    <li><%= link_to "styles ", '' %><span class="darrow">&#9660;</span>
+      <ul class="sub2">
+       <% Style.all.each do |style|%>
+        <li><%= link_to style.name , style_path(style) %></li>
+       <% end %>
+       
+       <% if current_user %>
+         <li class='devider'>
+          ----------------
+         </li>
+         <li>
+           <%= link_to(new_style_path) do %>
+             New Style
+           
+          <% end%>
+         </li>
+        
+    
+        <% end%>
+       
+      </ul>
+    </li>
+    
+    <li><%= link_to "ingredients ", '' %><span class="darrow">&#9660;</span>
+      <ul class="sub2">
+       <% Ingredient.all.each do |ingredient|%>
+        <li><%= link_to ingredient.name , ingredient_path(ingredient) %></li>
+       <% end %>
+       <% if current_user %>
+         <li class='devider'>
+          ----------------
+         </li>
+         <li>
+           <%= link_to(new_ingredient_path) do %>
+             New Ingredient
+           
+          <% end%>
+         </li>
+    
+        <% end%>
+         
+      </ul>
+      
+    </li>
+   </ul>
+   
+  <ul class="navul right">
+    <% if !current_user %>
+    <li><%= link_to "sign up", new_user_registration_path %></li>
+    <li><%= link_to "sign in", new_user_session_path %></li>
+    <% else %>
+    <li><%= link_to current_user.username %><span class="darrow">&#9660;</span>
+      <ul class="sub1">
+       
+        <li><%= link_to "create recipe ", new_recipe_path %></li>
+        <li><%= link_to "create article ", new_article_path %></li>
+        <li><%= link_to "edit profile", edit_user_registration_path %></li>
+        <li><%= link_to "sign out", destroy_user_session_path, method: :delete %></li>
+        <li><%= link_to "bla sub1a", '' %><span class="larrow">&#9668;</span><!--9658 is rarrow-->
+          <ul class="sub1a">
+             <li><%= link_to "create recipe ", new_recipe_path %></li>
+             <li><%= link_to "create article ", new_article_path %></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    
+    <li><%= link_to "username ", '' %><span class="darrow">&#9660;</span>
+      <ul class="sub2">
+       
+        <li><%= link_to "create recipe ", new_recipe_path %></li>
+        <li><%= link_to "create article ", new_article_path %></li>
+        <li><%= link_to "edit profile", edit_user_registration_path %></li>
+        <li><%= link_to "sign out", destroy_user_session_path, method: :delete %></li>
+        
+        <li><%= link_to "recipes ", new_recipe_path %></li>
+        
+      </ul>
+      
+    </li>
+    
+    <li><%= link_to "username ", '' %><span class="darrow">&#9660;</span>
+      <ul class="sub3">
+       
+        <li><%= link_to "sign out", destroy_user_session_path, method: :delete %></li>
+        
+        <li><%= link_to "recipes ", new_recipe_path %></li>
+        <li><%= link_to "articles ", new_article_path %></li>
+        <li><%= link_to "edit profile", edit_user_registration_path %></li>
+        <li><%= link_to "sign out", destroy_user_session_path, method: :delete %></li>
+      </ul>
+      
+    </li>
+    <% end %>
+   </ul>
+</nav>

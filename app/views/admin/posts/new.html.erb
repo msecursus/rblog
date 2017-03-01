@@ -1,0 +1,66 @@
+<!--<script>
+	$(function() {
+    $('textarea#froala-editor').froalaEditor()
+  });
+
+</script>-->
+<h1>Admin::Posts#new</h1>
+<p>Find me in app/views/admin/posts/new.html.erb</p>
+<h1>add new post</h1>
+
+<h2>Add New Post</h2>
+<div class="well">
+  
+<%= tinymce %>
+
+<%= form_for [:admin, @post] do |f| %>
+<!-- Check for errors -->
+	
+	<% if @post.errors.any? %>
+	
+		<% @post.errors.full_messages.each do |msg| %>
+			<!-- Show errors -->
+			<div class="alert alert-danger">
+				<%= msg %>
+
+			</div>
+
+		<% end %>
+
+	 <% end %>
+
+	 <div class="form-group">
+	 	<%= f.label :title %><br />
+	 	<%= f.text_field :title, class:'form-control' %>
+	 </div>
+	 <div class="form-group">
+	 	<%= f.label :category %><br />
+	 	<%= f.select :category_id, Category.all.collect {|x| [x.name, x.id]}, {:include_blank => 'Select One'}, class:'form-control' %>
+	 </div>
+	 <div class="form-group">
+	 	<%= f.label :author %><br />
+	 	<%= f.select :user_id, User.all.collect {|x| [x.name, x.id]}, {:include_blank => 'Select One'}, class:'form-control' %>
+	 </div>
+	 <div class="form-group">
+	 	<%= f.label :image %><br />
+	 	<%= f.file_field :image %>
+	 </div>
+
+		
+
+	  <div class="form-group">
+	 	<%= f.label :tags %><br />
+	 	<%= f.text_area :tags, class:'form-control' %>
+	 </div>
+	 <div class="form-group" id:"edit">
+	 	<%= f.label :body %><br />
+	 	<%= f.text_area :body, :class => "tinymce", :rows => 11, :cols => 120, id:'froala-editor' %>
+	 </div>
+
+	 <hr />
+
+	 <%= f.submit "Very New", class:'submitbtn' %>
+	 <%= link_to "Cancel", admin_categories_path, class:'btn btn-default' %>
+
+<% end %>
+</div>
